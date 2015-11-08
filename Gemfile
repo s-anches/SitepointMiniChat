@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 
 gem 'rails', '4.1.5'
 
@@ -8,6 +8,11 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
 end
 
 group :production do
@@ -15,19 +20,14 @@ group :production do
   gem 'rails_12factor'
 end
 
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
 gem 'jquery-rails'
 gem 'turbolinks'
 
-gem 'thin'
-gem 'faye-rails', '~> 2.0'
+gem 'unicorn'
 
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
